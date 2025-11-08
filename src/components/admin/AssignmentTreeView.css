@@ -1,0 +1,135 @@
+.assignment-tree-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tree-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+.tree-legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.legend-item.teacher {
+  color: #9b59b6;
+}
+
+.legend-item.student {
+  color: #2ecc71;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-item.teacher .legend-dot {
+  background: #9b59b6;
+}
+
+.legend-item.student .legend-dot {
+  background: #2ecc71;
+}
+
+.tree-canvas {
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  padding: 30px 20px;
+  min-height: 600px;
+}
+
+.tree-canvas svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* D3 Node Styles */
+.node {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.node:hover rect {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
+}
+
+.node:hover circle {
+  transform: scale(1.1);
+}
+
+.node.teacher-node rect {
+  filter: drop-shadow(0 2px 8px rgba(155, 89, 182, 0.3));
+}
+
+.node.student-node rect {
+  filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.3));
+}
+
+.node.course-node rect {
+  filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.4));
+}
+
+.node text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Line animations */
+line {
+  transition: all 0.3s ease;
+}
+
+line:hover {
+  stroke-opacity: 1;
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tree-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .tree-legend {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tree-canvas {
+    overflow-x: scroll;
+  }
+}

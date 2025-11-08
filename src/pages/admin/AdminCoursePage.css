@@ -1,0 +1,140 @@
+.admin-course-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+/* Page Header */
+.admin-course-header {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 25px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title h1 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.header-title p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+.btn-create-course {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-create-course:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Breadcrumb */
+.admin-breadcrumb {
+  max-width: 1400px;
+  margin: 0 auto 20px auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.breadcrumb-link {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: #bdc3c7;
+}
+
+.breadcrumb-current {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Main Content */
+.admin-course-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px 40px 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-course-header {
+    padding: 20px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .header-title h1 {
+    font-size: 24px;
+  }
+
+  .header-title p {
+    font-size: 14px;
+  }
+
+  .btn-create-course {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-breadcrumb {
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+
+  .admin-course-content {
+    padding: 0 20px 30px 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header-content,
+  .admin-breadcrumb,
+  .admin-course-content {
+    max-width: 1600px;
+  }
+}
